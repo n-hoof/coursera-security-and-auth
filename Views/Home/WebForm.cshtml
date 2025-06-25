@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "User Input Form";
+}
+
+<h2>User Input Form</h2>
+
+@if (TempData["FeedbackMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["FeedbackMessage"]
+    </div>
+}
+
+<form asp-action="Submit" asp-controller="Home" method="post">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+

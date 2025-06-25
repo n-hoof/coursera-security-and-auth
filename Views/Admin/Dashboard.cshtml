@@ -1,0 +1,9 @@
+@model List<UserViewModel>
+
+<h2>Registered Users</h2>
+<ul>
+@foreach (var user in Model)
+{
+    <li>@user.UserName - @user.Email</li>
+}
+</ul>
